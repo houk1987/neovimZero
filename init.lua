@@ -4,7 +4,7 @@ local global = vim.g
 
 -- Option Setting --
 
-option.showmode = true
+option.showmode = false
 option.expandtab = true
 option.tabstop = 4
 option.shiftwidth = 4
@@ -33,6 +33,7 @@ option.exrc=true
 option.wrap=false
 option.splitright=true
 option.splitbelow=true
+option.cmdheight=2
 
 -- Buffer Settings --
 
@@ -68,3 +69,13 @@ keymap("v","J",":m '>+1<CR>gv=gv",{silent = true})
 keymap("v","K",":m '<-2<CR>gv=gv",{silent = true})
 
 
+-- quite vim -- 
+keymap("n","<leader>q","<cmd>q<CR>",{silent = true})
+
+-- source  -- 
+keymap("n","<leader>l","<cmd>so<CR>",{silent = true})
+
+
+
+
+require "config.plugins"
